@@ -1,0 +1,23 @@
+.myform {
+    width: 100%;
+    border: 2px solid black;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.myform span {
+    font-weight: bold;
+}
+
+.myform input[type="text"] , button[type="submit"] {
+  font-size: inherit; 
+  /* thua huong kích thuong cua pt cha */
+  padding: 10px;
+}
+
+.myform button[type="submit"] {
+  background-color: purple;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}

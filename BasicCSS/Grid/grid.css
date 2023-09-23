@@ -1,0 +1,104 @@
+.grid-container {
+    display: grid;
+    background-color: navy;
+    padding: 10px;
+    height: 500px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 20px 40px; 
+}
+
+.grid-container .grid-item {
+   
+    background-color: aqua;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid black;
+}
+
+.grid-container .grid-item-1 {
+    /* grid-column-start: span 3;  */
+    /* Nhom 3 cot hang dau tien thanh 1 */
+    /* grid-row-start: span 3 ; */
+    grid-column: 1/span 2;
+    grid-row: 1/span 8; 
+    
+
+}
+
+.grid-container-2 {
+    display: grid;
+    height: 400px;
+    gap: 15px;
+    background-color: aquamarine;
+    padding: 10px;
+    grid-template-areas:
+    "area area . . "  
+    "area area . . ";
+}
+
+.grid-container-2 div {
+    padding: 20px 0 ;
+    text-align: center;
+    background-color: brown;
+    font-size: 35px;
+    color: #fff;
+}
+
+.grid-container-2 .item1 {
+    grid-area: are-a;
+}
+
+
+.grid-container-3 {
+    display: grid;
+    grid-gap: 10px;
+    background-color: blue;
+    padding: 10px;
+    grid-template-areas: 
+    "header header header header header header"
+    "menu main main main right right"
+    "menu footer footer footer footer footer";
+}
+
+.grid-container-3 div {
+    background-color: blueviolet;
+    text-align: center;
+    padding: 20px 0 ; 
+    font-size:  40px;
+}
+
+.item-multi-header {
+    grid-area: header;
+}
+.item-multi-menu {
+    grid-area: menu;
+}
+.item-multi-main {
+    grid-area: main;
+}
+.item-multi-right {
+    grid-area: right;
+}
+.item-multi-footer {
+    grid-area: footer;
+}
+
+
+/* Position */
+
+.relative {
+    position: relative;
+}
+
+.relative #fixed {
+    position: fixed;
+    height: 150px;
+    width: 150px;
+    background-color: blue;
+    top: 0;
+    right: 100px;
+
+    /* dinh vi vi tri nhung no s khong di chuyen theo the cha khi cuon page */
+}
+

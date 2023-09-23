@@ -1,0 +1,31 @@
+.container {
+    width: 100%;
+}
+.container .color {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 20px;
+    /* font-weight: bold; */
+    line-height: 50px;
+    padding-left: 15px;
+    box-sizing: border-box;
+}
+ 
+.container .color p {
+    font-weight: bold;
+}
+
+.container .hex-color {
+    background-color: #86DEFA;
+}
+.container .rgb-color {
+    background-color: rgb(134 222 250);
+}
+.container .hsl-color {
+    background-color: hsl(194.48deg 92.06% 75.29%);
+}
+
+.container .alpha-color {
+    background-color: #86DEFA;
+    opacity: 0.5;
+}

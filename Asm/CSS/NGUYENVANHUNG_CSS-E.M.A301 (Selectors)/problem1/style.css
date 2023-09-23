@@ -1,0 +1,24 @@
+.container {
+    width: 580px;
+    margin: auto;
+}
+
+.container h1 {
+    color: blue;
+    font-size: 40px;
+}
+
+.container p {
+    font-size: 20px;
+}
+
+.container p span {
+    font-size: 50px;
+    
+
+}
+.container h2 {
+    background-color: blue;
+    color: white;
+    font-size: 200%;
+}

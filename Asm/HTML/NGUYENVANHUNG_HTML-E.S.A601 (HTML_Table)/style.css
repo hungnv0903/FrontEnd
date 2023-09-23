@@ -1,0 +1,24 @@
+.content {
+    width: 100%;
+}
+.content .top {
+    width: 65%;
+    margin: auto;
+    text-align: center;
+}
+p {
+    font-weight: bolder;
+    font-size: 16px;
+}
+table {
+    border: 1px solid black;
+}
+td {
+    width: 100px;
+    text-align: center;
+    border: 1px solid black;
+    font-weight: bolder;
+}
+tr {
+    border: 1px solid black;
+}

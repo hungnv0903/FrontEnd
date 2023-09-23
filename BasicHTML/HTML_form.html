@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Html Form</title>
+</head>
+<body>
+    <form action="https://www.w3schools.com/action_page.php" method="post" target="_blank" 
+        oninput="x.value = parseInt(numberA.value)-parseInt(numberB.value)">
+        <fieldset>
+            <legend>Off with ro reason</legend>
+            <fieldset>
+                <legend>Student Info</legend>
+                <label for="fName">First Name :</label> <br>
+                <input type="text" name="firstName" id="firstName" required> <br>
+                
+                <label for="lName">Last Name :</label> <br>
+                <input type="text" name="lastName" id="lastName" required minlength="2" maxlength="7"><br>
+
+                <label for="age">Age :</label><br>
+                <input type="number" name="age" id="age" min="1"><br>
+
+                <label for="email">Email :</label><br>
+                <input type="email" name="email" id="email" required> <br>
+
+                <label for="password">Password :</label><br>
+                <input type="password" name="password" id="password" required ><br>
+
+                <label for="number">Number :</label><br>
+                <input type="tel" name="number" id="number" required pattern="[0-9]{4}-[0-9]{3}-[0-9]{3}"><br>
+
+                <label>Gender :</label><br>
+                <input type="radio" name="gender" id="male" value="male">
+                <label for="">Male</label><br>
+                <input type="radio" name="gender" id="female" value="female">
+                <label for="">Female</label><br>
+                <input type="radio" name="gender" id="undefine" value="undefine">
+                <label for="">Undefine</label><br>
+                
+                
+
+                <label for="color">Favorite Color :</label><br>
+                <input type="color" name="color" id="color">
+            </fieldset>
+
+            <fieldset>
+                <legend>Explain</legend>
+                <label for="reason">Reason :</label>
+                <select name="reason" id="reason">
+                    <option value="2">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend>Remaining points</legend>
+                <input type="range" name="numberA" id="" value="50"><br>
+                <input type="number" name="numberB" id="" value="0">
+                <label for="">Remaining points</label><br>
+                <output name="x" for="numberA numberB">50</output>
+
+            </fieldset>
+            <input type="submit" name="submit" value="Submit" id="submit">
+        </fieldset>
+    </form>
+</body>
+</html>

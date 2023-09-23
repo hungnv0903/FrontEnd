@@ -1,0 +1,15 @@
+.standard {
+    width: 500px; 
+    height: 200px;
+    padding: 50px;
+    border: 5px solid rebeccapurple; 
+    margin: 20px; 
+}
+  
+.alternate {
+    width: calc(500px - 100px - 10px); 
+    height: calc(200px - 100px - 10px);
+    margin: 20px; 
+    padding: 50px;
+    border: 5px solid rebeccapurple;
+  }

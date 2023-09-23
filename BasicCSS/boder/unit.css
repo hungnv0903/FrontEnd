@@ -1,0 +1,48 @@
+body {
+    font-size: 22px;
+} 
+
+.parent {
+    font-size: 30px;
+    border: 1px solid black ; 
+    margin-bottom: 20px;
+}
+
+.parent .value-em {
+    font-size: 0.5em;
+}
+
+.parent .value-rem {
+    font-size: 1.5em;
+    
+}
+.parent-width {
+    background-color: #eee;
+    width: 300px;
+    height: 200px;
+}
+
+.children-width {
+    width: 50%;
+    height: 40%;
+    background-color: red;
+}
+
+.grandrentparent {
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    font-size: 13px;
+}
+.parent {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(177, 109, 109);
+    font-size: 30px;
+}
+.children {
+    width: 50%;
+    height: 50%;    
+    background-color:yellow ;
+    font-size: 100%;
+}

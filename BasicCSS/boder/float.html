@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div1 {
+            background-color: pink;
+           
+        }
+        .div2 {
+            background-color: blue;
+           
+        }
+        .div3 {
+            background-color: green;
+        }
+        .div-float {
+            color: white;
+            float: right;
+        }
+        .clear {
+            clear: both;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        * {
+            /* box-sizing: border-box; */
+        }
+        .box-4 {
+            padding: 50px;
+            width: 20%;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS float</h1>
+    <hr>
+        <h2>Grid box (float)</h2>
+        <div class="clear">
+            <div class="box-4" style="background-color: #bbb;">
+                Lorem ipsum dolor sit amet.
+            </div>
+            <div class="box-4" style="background-color: #ccc;">
+                Lorem ipsum dolor sit amet.
+            </div>
+            <div class="box-4" style="background-color: #ddd;">
+                Lorem ipsum dolor sit amet.
+            </div>
+            <div class="box-4" style="background-color: #eee;">
+                Lorem ipsum dolor sit amet.
+            </div>
+            <div class="box-4" style="background-color: #bbb;">
+                Lorem ipsum dolor sit amet.
+            </div>
+            <div class="box-4" style="background-color: #ccc;">
+                Lorem ipsum dolor sit amet.
+            </div>
+            <div class="box-4" style="background-color: #ddd;">
+                Lorem ipsum dolor sit amet.
+            </div>
+        </div>
+    <hr>
+    <div>
+        <h2>Floating div</h2>
+        <div class="div-float div1">Div1</div>
+        <div class="div-float div2">Div2</div>
+        <div class="div-float div3">Div3</div>
+    </div>
+</body>
+</html>

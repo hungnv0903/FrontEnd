@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Form</title>
+</head>
+<body>
+    <div class="container">
+            <div class="top">
+                <h1>FA Survey Form</h1>
+                <p>Thank you for taking the time to help us improve the platform</p>
+            </div>
+            <form action="https://www.w3schools.com/action_page.php" method="post" target="_blank">
+                <div class="form-group">
+                    <label for="name" class="lable-control">Name</label>
+                    <input type="text" name="usernamr" class="form-control" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email" class="lable-control">Email</label>
+                    <input type="email" name="email" class="form-control" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="age" class="lable-control">Age</label>
+                    <input type="number" name="age" class="form-control" placeholder="Age" required min="5">
+                </div>
+                <div class="form-group">
+                    <label for="role" class="lable-control">Which option best describes your current role?</label>
+                    <select name="current-role" class="form-control" id="current-rol">
+                        <option value="role" selected>Select curent role</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </div>
+                <div class="form-group form-selection">
+                    <label for="radio" class="lable-control">Would you recommend FA to a friend ?</label>
+
+                    <input type="radio" name="radio" value="definitely" class="input-radio">
+                    <label for="" class="lable-selection">Definitely</label><br>
+
+                    <input type="radio" name="radio" value="maybe" class="input-radio">
+                    <label for="" class="lable-selection">Maybe</label><br>
+
+                    <input type="radio" name="radio" value="notsure" class="input-control">
+                    <label for="" class="lable-selection">Not sure</label>
+                </div>
+
+                <div class="form-group form-selection">
+                    <label for="checkbox" class="lable-control">What would you like to see improved ?</label>
+
+                    <input type="checkbox" name="front-end" value="fe_project" class="input-checkbox">
+                    <label for="" class="lable-selection">Front-end Projects</label><br>
+
+                    <input type="checkbox" name="back-end" value="back-end" class="input-checkbox">
+                    <label for="" class="lable-selection">Back-end Projects</label><br>
+
+                    <input type="checkbox" name="ai" value="ai" class="input-checkbox">
+                    <label for="" class="lable-selection">AI</label><br>
+
+                    <input type="checkbox" name="machine-learning" value="machine-learning" class="input-checkbox">
+                    <label for="" class="lable-selection">Machine Learning</label><br>
+                    
+                    <input type="checkbox" name="soft-skills" value="soft-skills" class="input-checkbox">
+                    <label for="" class="lable-selection">Soft Skills</label><br>
+                    <input type="checkbox" name="presentation-skills" value="presentation-skills" class="input-checkbox">
+                    <label for="" class="lable-selection">Presentation Skills</label>
+                </div>
+
+                <div class="form-group form-selection">
+                    <label for="textarea" class="lable-control">What would you like to see improved ?</label>
+                    <textarea name="" id="" cols="30" rows="10" class="input-textarea" placeholder="Enter your comment here..." required></textarea>
+    
+                </div>
+
+                <div class="form-group form-selection">
+                    <button type="submit" class="submit-buttom">Submit</button>
+                </div>
+            </form>
+    </div>
+</body>
+</html>

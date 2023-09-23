@@ -1,0 +1,47 @@
+.flex-parent {
+    /* flex: 1; */
+    display: flex;
+}
+
+.flex-parent .flex-item {
+    flex: 2 1 200px;
+    background-color: violet;
+    margin: 15px;
+    padding: 10px;
+    color: white;
+}
+.flex-container {
+    display: flex;
+}
+
+.bg-blue {
+    background-color: navajowhite;
+}
+
+.h-250 {
+    height: 250px;
+}
+.align-item {
+    align-items: center;
+}
+.flex-container .red-item {
+    min-height: 30px;
+    background-color: red;
+    padding: 0 !important;
+}
+.flex-container .blue-item {
+    min-height: 60px;
+    background-color: blue;
+    padding: 0 !important;
+}
+.flex-container .green-item {
+    min-height: 180px;
+    background-color: green;
+    padding: 0 !important;
+}
+.flex-container div {
+    background-color: orangered;
+    color: white ; 
+    padding: 10px;
+    margin: 10px;
+}

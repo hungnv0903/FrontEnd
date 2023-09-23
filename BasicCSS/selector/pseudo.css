@@ -1,0 +1,50 @@
+::marker {
+    color: peru;
+}
+
+p.after ::after {
+    content: "AAA";
+    color: aquamarine;
+}
+
+.pseudo-hidden{
+    display: none;
+    background-color: red;
+    color: green;
+
+}
+
+.pseudo-toggle {
+    text-align: center;
+    padding: 20px;
+    cursor: pointer;
+    background-color: greenyellow;
+}
+
+.pseudo-toggle p {
+    display: none;
+    background-color: aliceblue;
+    color: black;
+}
+
+.pseudo-toggle:hover {
+    background-color: green;
+}
+
+.pseudo-toggle:hover .pseudo-hidden{
+    display: block;
+}
+
+a:link {
+    color: red;
+}
+a:visited {
+    color: brown;
+}
+
+a:hover {
+    color: hotpink;
+}
+a:active {
+    color: green;
+}

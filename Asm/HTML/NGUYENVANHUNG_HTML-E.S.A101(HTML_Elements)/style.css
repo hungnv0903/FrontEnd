@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+h4 {
+    font-size: 25px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.wrapper {
+    width: 500px;
+    height: 400px;
+    margin: auto;
+    margin-top: 100px;
+    border: 2px solid rgb(139, 138, 138);
+    box-shadow: 5px 5px 5px rgb(145, 135, 135);
+}
+.wrapper .content {
+    margin: auto;
+    margin-top: 30px;
+    width: 400px;
+    height: 300px;
+}
+.wrapper .content .image {
+    width: 120px;
+    height: 120px;
+    border: 7px solid black;
+    border-radius: 6px;
+}
+.wrapper .content .image img {
+    display: block;
+    border: 2px solid white;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    box-sizing: border-box;
+}
+.wrapper .content .profile {
+    width: 100%;
+    height:180px ;
+    margin-top: 20px;
+    line-height: 35px;
+}

@@ -1,0 +1,46 @@
+body{
+    color: chartreuse;
+    text-align: center;
+}
+*{
+    color:chocolate;
+    text-align: center;
+}
+p {
+    color: coral;
+    text-align: right;
+}
+.para3{
+    color:  darkblue;
+    text-align: left;
+}
+#para2{
+    color: red;
+    text-align: center;
+}
+/* CSS [atribute*="vale"] */
+p[class*="bottom"] {
+    background-color: aqua;
+}
+/* CSS [atribute$="vale"] */
+p[class$="middle"] {
+    background-color: dimgray;
+}
+/* CSS [atribute^="vale"] */
+p[class^="middle"] {
+    background-color: dimgray;
+}
+/* CSS [atribute|="vale"] */
+p[class|="top"] {
+    background-color: darkolivegreen;
+}
+
+/* CSS [atribute="vale"] */
+img[title~="flower"] {
+    border: 3px solid greenyellow;
+}
+/* CSS [atribute="vale"] */
+a[target="_bank"] {
+    color: blue;
+    font-weight: bold;
+}

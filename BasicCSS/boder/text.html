@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        /* @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap'); */
+        p {
+            padding: 15px;
+            border: 1px solid black;
+            width: 200px;
+            text-align: justify;
+        }
+
+        .font-decoration {
+            text-decoration: underline;
+        }
+
+        .font-style {
+            font-style: italic;
+        }
+        .font-transform {
+            text-transform: uppercase;
+            word-spacing: 30px;
+            letter-spacing: 15px;
+            font-weight: bold;
+        }
+        h1 , h2 , h3 , h4 , h5 , h6 {
+            color: green;
+            text-align: center;
+        }
+
+        @font-face {
+            font-family: Dancing-Regular;
+            src: url(static/DancingScript-Regular.ttf);
+        }
+        @font-face {
+            font-family: Dancing-Medium;
+            src: url(static/DancingScript-Medium.ttf);
+        }
+        @font-face {
+            font-family: Dancing-Semibold;
+            src: url(static/DancingScript-SemiBold.ttf);
+        }
+        @font-face {
+            font-family: Dancing-Bold;
+            src: url(static/DancingScript-Bold.ttf);
+        }
+        .bold {
+            font-family: Dancing-Bold;
+            font-weight: normal;
+        }
+        .semibold {
+            font-family: Dancing-Dancing-Semibold;
+            font-weight: normal;
+        }
+        .medium {
+            font-family: Dancing-Medium;
+            font-weight: normal;
+        }
+        .regular {
+            font-family: Dancing-Regular;
+            font-weight: normal;
+        }
+
+        ul {
+            list-style-type: square;
+            list-style-position: outside;
+        }
+        ol {
+            list-style-type: armenian;
+        }
+        li {
+            border: 1px dashed pink;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS text</h1>
+    <hr>
+    <ol>
+        <li>Red</li>
+        <li>Blue</li>
+    </ol>
+    <hr>
+    <ul>
+        <li>Red</li>
+        <li>Blue</li>
+    </ul>
+    <hr>
+    <div class="font-family">
+        <h1 class="bold">Day la H1</h1>
+        <h2 class="semibold">Day la H2</h2>
+        <h3 class="medium">Day la H3</h3>
+        <h4 class="regular">Day la H4</h4>
+    </div>
+    <hr>
+    <div class="heading">
+        <h1>Day la H1</h1>
+        <h2>Day la H2</h2>
+        <h3>Day la H3</h3>
+        <h4>Day la H4</h4>
+        <h5>Day la H5</h5>
+        <h6>Day la h6</h6>
+    </div>
+    <hr>
+
+    <div class="font-transform">
+        Font-transform
+    </div>
+    <hr>
+    <div class="font-style">
+        Font-style
+    </div>
+    <hr>
+    <div class="font-decoration">
+        Font Decoration
+    </div>
+    <hr>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Facere eveniet quae cumque ab enim officiis iusto numquam ipsa inventore voluptatum!</p>
+</body>
+</html>

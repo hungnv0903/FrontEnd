@@ -1,0 +1,12 @@
+.container h2+p {
+    color: red;
+}    
+
+.container ul.list>li {
+    border-bottom: 1px solid gray;
+    /* list-style: none; */
+}
+
+.container ul.list > li::marker {
+   content: none;
+}

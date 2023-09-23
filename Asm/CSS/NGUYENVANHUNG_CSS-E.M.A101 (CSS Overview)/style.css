@@ -1,0 +1,26 @@
+a {
+    text-decoration: none;
+}
+h1 {
+    color: hotpink;
+    border-bottom: 10px dotted purple ;
+    height: 50px;
+}
+h2 {
+    font-style: italic;
+}
+.job-title {
+    font-weight: bold;
+    color: #999999;
+}
+ul {
+    background-color: #eeeeee;
+    border: 5px solid purple;
+    padding: 30px;
+}
+ul li #link-email {
+    color: green;
+}
+ul li #link-website {
+    color: orangered;
+}

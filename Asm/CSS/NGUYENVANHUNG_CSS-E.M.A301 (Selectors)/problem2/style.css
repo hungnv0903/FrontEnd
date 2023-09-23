@@ -1,0 +1,27 @@
+.container {
+    width: 580px;
+    margin: auto;
+}
+
+.container h1 {
+    font-size: 40px;
+}
+
+.container p {
+    font-size: 20px;
+}
+
+.container p span.alert {
+    border: 1px solid gray;
+}
+
+.container p span.stop {
+    background-color: red;
+}
+.container p span.go {
+    background-color: green;
+}
+#special {
+    background-color: yellow;
+    font-size: 200%;
+}
