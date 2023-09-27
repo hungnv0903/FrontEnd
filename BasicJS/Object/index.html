@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var obj_1 = {} ;
+        var obj_2 = new Object() ; 
+
+        obj_1.title = "javascript" ; 
+        obj_1.content = "This is javasript" ; 
+
+        obj_2 = {
+            fname : "Nguyen",
+            lname : "Hung",
+            age : function(){
+                
+            }
+        }
+
+        obj_2.lname = "Van Hung" ;
+        console.log(obj_1);
+        console.log(obj_2);
+
+        for(var key in obj_2){
+            console.log(`Key : ${key}  Value : ${obj_2[key]}`);
+        }
+
+        // Object long object
+        var obj  = {
+            obj_1, obj_2
+        } ; 
+
+        for(var key in obj.obj_1){
+            console.log(obj.obj_1[key]);
+        }
+
+        //Mang long object
+        
+        var array = [
+            {name:"nguyenhung" , age : 24 , adress : "Phu Tho"},
+            {name:"nguyen van a" , age : 18 , adress:"Ha Noi"},
+            {name:"nguyen van B" , age : 30 , adress:"TP.HCM"}
+        ]
+
+        for(var key in array) {
+            console.log(array[key]);
+            console.log(array[key].name);
+        }
+
+
+        
+        
+        
+    </script>
+</body>
+</html>

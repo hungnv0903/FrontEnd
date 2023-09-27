@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section></section>
+    <script>
+        let Profile = {
+            name : "Son Tung MTP " , 
+            nationality : "Vietnamese" , 
+            genre : "Pop",
+            debut : 2015,
+            song : [
+                {name :"His/her firt song, Con mua ngang qua" , released : "was released in 2012"},
+                {name : "His.her last song Hay chao cho anh" , released : "is the most succesfully by far"}
+            ]
+        };
+
+        var item_song = Profile.song ; 
+        var song = '' ; 
+        console.log(item_song);
+        for(i in item_song) {
+            song  += `${item_song[i].name} ${item_song[i].released} .`;
+        }
+        console.log(song);
+        let info = `The ${Profile.nationality} ${Profile.genre} star ${Profile.name} were  active since ${Profile.debut}.
+                    ${song}` ; 
+        const section = document.querySelector('section');
+        let para1 = document.createElement('p');
+        para1.textContent = info;
+        section.appendChild(para1);
+    </script>
+</body>
+</html>

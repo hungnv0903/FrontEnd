@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="output">
+        <ul></ul>
+        <p></p>
+    </div>
+    <script>
+        // Practice 1 ; 
+        var list = document.querySelector(".output ul") ; 
+        var teraBox = document.querySelector("p") ; 
+        var total = 0 ; 
+        // list.innerHTML = "" ; 
+        // teraBox.textContent = "" ; 
+
+        var productString ="Underpants:6.99,Socks:5.99,T-shirt:14.99" ; 
+        
+        var productArray = productString.split(",") ;  
+        console.log(productArray);
+        for(i = 0 ; i<productArray.length ; i++){
+            var item_array = productArray[i].split(":") ;
+            console.log(item_array);
+            var item_string = item_array.join("---$") ; 
+            console.log(item_string);
+            var list_item = document.createElement('li') ; 
+            list_item.textContent = item_string ; 
+            list.appendChild(list_item) ; 
+            total+=Number(item_array[item_array.length-1]) ;  
+        }
+        var teraBox_total = document.createElement('p') ; 
+        teraBox_total.textContent = `$${total.toFixed(2)}` ; 
+        teraBox.appendChild(teraBox_total) ; 
+        console.log(total);
+
+
+        var Data = [1 , '2' , 3 , '4' , 5] ; 
+        console.log(Data.shift());
+        console.log("Data : " , Data);
+        console.log("Data[0] : " , Data[0]);
+
+        console.log("New_lenght : " , Data.unshift("10"));
+        console.log("Data" , Data);
+        console.log("Data[0] : " , Data[0]);
+
+
+
+
+        var mystring = `manchester,lodon,liverpool,birmingham,leeds,carlisle ` ;
+        var myData = mystring.split(",") ; 
+        myData.push("Cardiff") ; 
+        console.log(myData);
+        console.log("Lenght : " , myData.length);
+        
+        myData.push("Bradford" , "Brighton")  ;
+        console.log(myData);
+        console.log("New_lenght :" , myData.length);
+        
+        var pop_number = myData.pop()
+        console.log("Remove_item : " , pop_number);
+        console.log(myData);
+        console.log("New_lenght : " , myData.length);
+        
+
+
+
+        var arrayPopPush = [1,2,3,4,5,6,7] ; 
+        var pop_number = arrayPopPush.pop() ; 
+        console.log(pop_number);
+        console.log(arrayPopPush);
+
+        var push_number = arrayPopPush.push(10 , 11 , 12) ;
+        console.log(push_number); 
+        console.log(arrayPopPush);
+
+
+
+        var myData = `manchester,lodon,liverpool,birmingham,leeds,carlisle ` ; 
+        var myData_array = myData.split(",") ; 
+        console.log(myData_array);
+        console.log(myData_array[0]); 
+        console.log(myData_array[2]); 
+        console.log(myData_array[myData_array.length-1]); 
+        // myData_array.splice(myData_array.length-1 , 1 ) ;
+        myData_array.pop() ; 
+        console.log(myData_array);
+        var new_tring = myData_array.join(" ") ; 
+        console.log(new_tring); 
+
+
+
+        var array_name = ['nguyen , van , hung'] ; 
+        console.log(array_name.join(" "));
+        var str_name = "" ; 
+        for(i = 0 ; i<array_name.length ; i++){
+            str_name+=array_name[i] ; 
+        }
+        console.log(str_name);
+        
+        var str = 'nguyen van hunng' ; 
+        console.log(str.split(' ') , 4);
+
+        for(i = 0 ;  i<str.length ; i++){
+
+        }
+
+
+
+
+
+        var a = [1 , 2 , 33 , 4 , 4 , 2 , 1 , 15 , 66 , 7 ] ;
+        var mark = new Array(10000) ;
+        for(i = 0 ; i<mark.length ; i++){
+            mark[i] = 0 ; 
+        } 
+        console.log(mark.length); 
+       
+        for(i = 0 ; i<=a.length ; i++){
+            
+        }
+
+        
+    </script>
+</body>
+</html>

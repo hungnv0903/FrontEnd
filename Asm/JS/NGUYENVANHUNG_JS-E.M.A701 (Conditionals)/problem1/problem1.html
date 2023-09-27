@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body><section></section>
+    <script>
+        var content = document.querySelector('section') ; 
+        var para = document.createElement('p') ; 
+        var section = 'summer' ;  
+        var response ; 
+        if(section === 'summer'){
+                response = "It's probably nice and warm where you are , enjoy the sun !"
+        }else {
+                if(section==='winter'){
+                    response = "It's probably very cold where you live , enjoy the fun !"
+                }else{
+                    response = "We don't know what season it is.";
+                }
+        }
+
+        para.textContent = response ; 
+        content.appendChild(para) ; 
+    </script>
+</body>
+</html>

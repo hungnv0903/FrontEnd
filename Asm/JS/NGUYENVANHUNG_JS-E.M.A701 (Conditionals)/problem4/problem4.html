@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section></section>
+    <script>
+        var section  = document.querySelector('section') ; 
+        var para1 = document.createElement('p') ; 
+        var para2 = document.createElement('p') ; 
+        var machineActive = true ; 
+        var pwd = '12345' ;
+        var machineResult ; 
+        var pwdResut ; 
+        
+        if(machineActive==true){
+            machineResult = "Machine is active.Trying login."
+            pwdResut = pwd=='12345' ? "Login successful" : "Login failed!" ; 
+        }else{
+            machineResult = "The machine is turned off."
+        }
+
+        para1.textContent = machineResult ; 
+        para2.textContent = pwdResut ; 
+        section.appendChild(para1) ; 
+        section.appendChild(para2) ; 
+    </script>
+</body>
+</html>

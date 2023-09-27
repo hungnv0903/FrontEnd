@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section></section>
+    <script>
+        let number_one = 12 ; 
+        let number_two = 12 ; 
+        let number_third = 1 ; 
+        let number_four = 3; 
+        
+        let result_one = number_one + number_two ; 
+        let result_two = number_four - number_third ;  
+
+        let finalResult  ; 
+        let evenOddResult ;
+        
+        
+        finalResult = result_one*result_two ; 
+        evenOddResult = finalResult%2 ; 
+
+        const section = document.querySelector('section') ; 
+        let p1 = document.createElement('p') ; 
+        let finalResultCheck = finalResult === 48 ? 'Yes, well done ? ' : `No , it is ${finalResult}` ;
+        p1.textContent = `Is the finalResult 48 ? ${finalResultCheck}` ;
+        let p2 = document.createElement('p') ; 
+        let evenOddResultCheck = evenOddResult === 0 ? 'The final result is even !' : 'The final result is oll. Hrm.' ; 
+
+        p2.textContent = evenOddResultCheck ; 
+
+        section.appendChild(p1) ; 
+        section.appendChild(p2) ; 
+        
+   </script>
+</body>
+</html>

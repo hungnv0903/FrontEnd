@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section></section>
+    <script>
+        let result = 10/2 + 21/100;
+        let result2 = (4+2)/3;
+        result *= result2 ; 
+        let finalResult = result.toFixed(2) ; 
+        finalNumber = Number(finalResult) ; 
+        // document.write(typeof(finalNumber)) ; 
+        const section = document.querySelector('section');
+        let para1 = document.createElement('p');
+        para1.textContent = `Your finalResult is ${finalResult}`;
+        let para2 = document.createElement('p');
+        let finalNumberCheck = isNaN(finalNumber) === false  
+        // Kiem tra tính hop le của bien finalNumber. Neu bằng false thì  
+                            ? 'finalNumber is a number type. Well done!' 
+                            : `Ooops! finalNumber is not a number.`;
+        para2.textContent = finalNumberCheck;
+        section.appendChild(para1);
+        section.appendChild(para2);
+    </script>
+</body>
+</html>

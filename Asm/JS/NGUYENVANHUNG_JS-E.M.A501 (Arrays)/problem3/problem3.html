@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section></section>
+    <script>
+        let myArray = [
+        'Ryu',
+        'Ken',
+        'Chun-Li',
+        'Cammy',
+        'Guile',
+        'Sakura',
+        'Sagat',
+        'Juri',
+        ];
+
+        myArray.pop() ; 
+        console.log(myArray);
+        myArray.push("Zangife","Ibuki") ; 
+        console.log(myArray);
+
+        var new_array = [] ; 
+        for(i = 0 ; i<myArray.length ; i++) {
+            var string_item = `${myArray[i]} (${i})`  ; 
+            new_array.push(string_item) ; 
+        }
+        console.log(new_array);
+
+        var myString = new_array.join(" - ") ; 
+
+
+        const section = document.querySelector('section');
+
+        let para1 = document.createElement('p');
+        para1.textContent = myString;
+
+        section.appendChild(para1);
+    </script>
+</body>
+</html>

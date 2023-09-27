@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section></section>
+    <script>
+        let theorem = 'Pythagorean theorem';
+        let a = 5;
+        let b = 8;
+        let myString = 'Using *, we can work out that that if the two shortest sides of a rightangled triangle have lengths of * and *, the length of the hypotenuse is *.';
+        myString = `Using ${theorem}, we can work out that that if the two shortest 
+                    sides of a rightangled triangle have 
+                    lengths of ${a} and ${b}, the length of 
+                    the hypotenuse is ${Math.sqrt(a**2 + b**2)}.`; 
+        console.log(myString);
+        const section = document.querySelector('section');
+        let para1 = document.createElement('p');
+        para1.textContent = myString
+        section.appendChild(para1) ; 
+    </script>
+</body>
+</html>

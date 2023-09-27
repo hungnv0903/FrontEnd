@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section></section>
+    <script>
+        var machineActive = true ;
+        var score = 75 ; 
+        var response ; 
+
+        var section = document.querySelector('section') ; 
+        var para1 = document.createElement('p') ; 
+        var para2 = document.createElement('p') ; 
+        if(machineActive==true){
+            if(score<0 || score>100) response = "This is not possible, an error has occurred." ; 
+            if(score>=0 && score<=19) response = "We don't know what season it is."; 
+            if(score>=20 && score<=39) response = "You know some things, but it's a pretty bad score. Needs improvement." ; 
+            if(score>=40 && score<=69) response = "You did a passable job, not bad! " ; 
+            if(score>=70 && score<=89) response = "That's a great score, you really know your stuff." ; 
+            if(score>=90 && score<=100) response = "What an amazing score! Did you cheat? Are you for real?" ; 
+        }else{
+                response =  "The machine is turned off. Turn it on to process your score." ; 
+        }
+        para1.textContent = `Your score is ${score}` ; 
+        para2.textContent = response ; 
+        section.appendChild(para1)
+        section.appendChild(para2) ; 
+    </script>
+</body>
+</html>

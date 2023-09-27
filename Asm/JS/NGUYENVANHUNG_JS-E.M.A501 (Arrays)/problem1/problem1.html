@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section></section>
+    <script>
+        var myArray = ["Pizza" , "Sushi" , "The Beatles"] ; 
+        console.log(myArray) ; 
+        myArray[0] = "Hambuger" ; 
+        myArray[1] = "PhoBo" ; 
+        console.log(myArray);
+        myArray.unshift("Caffe") ; 
+        console.log(myArray);
+        const section = document.querySelector('section');
+        let para1 = document.createElement('p');
+        para1.textContent = `Array: ${myArray}`;
+
+        section.appendChild(para1);
+    </script>
+</body>
+</html>
