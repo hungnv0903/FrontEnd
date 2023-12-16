@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function someFunction(number) {
+            function otherFunction(input) {
+                return a;
+            }
+
+            var a = 5;
+
+            return otherFunction;
+        }
+        var firstResult = someFunction(9);
+        var result = firstResult(2);
+        console.log(firstResult); // output: là fuction otherFuction(input){return a}
+        console.log(result); // 5
+        //Các tham só truyền vào là number,input không sử dụng(không cần quan tâm).
+        // OtherFunction đang là một hàm Closure nó có thể sử dụng được tất cả các biến của hàm cha (là someFuction)
+        // Theo cơ chế Hoisting thì việc gán a = 5 mặc dù chưa khai báo a nhưng Javascript vẫn sẽ tự động 
+        // tạo một biến a đẩy lên đầu trong phạm vi hiên tại.
+        // Và khi thực hiện gọi return a ; thì nó tìm đến biến a .Ở trong otherFunction không có thì nó sẽ 
+        // ra ngoài để nó tìm. Tức là a có pham vi hoạt động ở bất kì đâu trong someFunction(là 1 function scope)
+        // someFuction() trả về một fuction và gán cho firstResult và firstResult trả về giá trị là 5.
+    </script>
+</body>
+
+</html>

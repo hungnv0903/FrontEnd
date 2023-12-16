@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="button"></button>
+    <script>
+        const btn = document.getElementById('button') ; 
+        console.log(btn);
+        
+        // CSS
+        btn.type = "submit" ; 
+        btn.style.width = "200px" ;
+        btn.style.height = "100px" ;
+        btn.style.borderRadius = "5px" ;
+        let text = btn.textContent = "Machine is off" ;
+        console.log("Text : ",text); 
+        btn.style.fontSize = "20px" ; 
+        btn.style.fontWeight = "bold" ; 
+        
+        // Event   
+        btn.addEventListener('click' , function(){
+            if(text=="Machine is off"){
+                text = btn.innerHTML = "Machine is on" ;
+ 
+            }else{
+                text = btn.innerHTML = "Machine is off" ; 
+            }
+        }) ; 
+ 
+        
+    </script>
+</body>
+</html>

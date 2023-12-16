@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas></canvas>
+    <script>
+    const canvas = document.querySelector('canvas') ; 
+    const ctx = canvas.getContext("2d") ; //Lay ngu canh 2d.Cho pheo minh duoc phep ve len tren canvas
+    console.log(canvas);
+    // Canvas CSS
+    canvas.style.width = "500px" ; 
+    canvas.style.height = "300px" ; 
+    canvas.style.border = "2px solid blue" ; 
+
+    let x = 16 ; 
+    let y = 16 ; 
+    const circleSize = 16 ; 
+
+    //drawCircle() 
+    function drawCircle(x , y , size){
+        ctx.beginPath() ; 
+        ctx.arc(x , y , size , 0 , Math.PI*2 ) //0:la goc bat dau v hinh tron. Math.PI*2 :goc tao hinh tron :360do 
+        ctx.fillStyle = "black" ; //cho hinh tron mau den
+        ctx.fill() ; // them mau vao hinh tron
+        ctx.closePath() //ket thuc hinh ve
+
+    }
+    drawCircle(x , y ,circleSize) ; 
+
+    // Event WASD
+    document.addEventListener('keydown' , function(event){
+        const s = 5 ; 
+        switch (event.key) {
+            case "w":
+                y-=s ; 
+                break;
+            case "a":
+                x-=s ; 
+                break;
+            case "s":
+                y+=s ; 
+                break;
+            case "d":
+                x+=s ; 
+                break;
+        
+        }
+        console.log((`(${x} , ${y})`));
+        if((x>=0 && y>=0) && (x<=canvas.width && y<=canvas.height)){
+            console.log("pass");
+            ctx.clearRect(0,0,canvas.width , canvas.height) ; // Xoa di canvas : xoa tat ca nhung gi da ve
+            drawCircle(x,y,circleSize) ; 
+        }else{
+            if(x<0) x = 0 ; 
+            if(x>canvas.width) x = canvas.width ; 
+            if(y<0) y = 0 ; 
+            if(y>canvas.height) y = canvas.height ; 
+            console.log("No pass");
+        }
+    }) ; 
+
+    </script>
+</body>
+</html>

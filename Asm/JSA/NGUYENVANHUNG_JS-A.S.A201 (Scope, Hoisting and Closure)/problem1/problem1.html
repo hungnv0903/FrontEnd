@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function test() {
+            console.log(a); // undefined
+            console.log(foo()); // 2
+            var a = 1;
+            function foo() {
+                return 2;
+            }
+        }
+        test();
+        // Output: undefined và 2 : Vì theo chơ chế hoisting thì các khai báo biến và khai báo hàm
+        // sẽ được đẩy lên đầu scope của nó trước khi biên dịch.Việc gán a=1 đang thực hiện ở bên dưới hàm 
+        // console.log() nên nó sẽ trả về undefined. Còn console.log(foo()) ở dưới khai báo hàm foo() mà foo()
+        // đang return 2 nên output là 2. 
+    </script>
+</body>
+
+</html>

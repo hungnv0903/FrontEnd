@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="button-bar">
+    </div>
+    <script>
+        const buttonBar = document.querySelector('.button-bar') ; 
+        buttonBar.style.border = "1px solid black" ; 
+        console.log(buttonBar);  
+
+        let arrayColor = ['red' , 'yellow' , 'green' , 'purple'] ;
+
+        for(let i = 0 ; i<arrayColor.length ; i++){
+            let buttonElement = document.createElement('button') ; 
+
+            // Them thuoc tinh data-color vao trong the button
+            buttonElement.dataset.color = arrayColor[i] ; 
+            buttonBar.appendChild(buttonElement) ; 
+        }
+
+        // CSS cho class button-bar
+        buttonBar.style.width = "200px" ; 
+        buttonBar.style.height = "auto" ; 
+        buttonBar.style.padding = "20px " ;
+        buttonBar.style.display = "flex" ; 
+        buttonBar.style.flexDirection = "column" ; 
+        buttonBar.style.alignItems = "flex-start" ;  
+        
+        const buttonElement = document.getElementsByTagName('button') ; 
+        console.log(buttonElement);
+        for(let i = 0 ; i<buttonElement.length ; i++){
+            buttonElement[i].textContent = arrayColor[i] ;
+            //Css cho the button Element
+            buttonElement[i].style.textTransform = "uppercase" ; 
+            buttonElement[i].style.width = "150px" ; 
+            buttonElement[i].style.height = "50px" ; 
+            buttonElement[i].style.borderRadius = "5px" ;   
+            buttonElement[i].style.margin = "10px auto" ;   
+        }
+
+        // Add Event 
+        //Cach_2 
+        buttonBar.addEventListener('click' , function(event){
+            if(event.target && event.target.matches("button")){
+                const button = event.target;
+                const color = button.getAttribute("data-color");
+                buttonBar.style.backgroundColor = color ;  
+            }
+        }) ; 
+
+        //Cach_1
+        // for(let i = 0 ; i<button.length ; i++){
+        //     button[i].addEventListener('click' , function(){
+        //         buttonBar.style.backgroundColor = button[i].dataset.color ; 
+        //     }) ; 
+        // }
+
+    </script>
+</body>
+</html>

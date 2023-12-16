@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section {
+            width: 100%;
+            height: auto ; 
+            line-height: 30px;
+            border: 1px solid black;
+            padding: 0 10px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <section></section>
+    <script>
+        const listNumber = document.querySelector('section') ; 
+        var i=500 ; 
+        function isPrime(num) {
+            for (let i = 2; i < num; i++) {
+                if (num % i === 0) {
+                    return false;
+                }
+            }
+
+        return true;
+        }
+
+        const para = document.createElement('p') ; 
+        while(i>=0){
+            if(isPrime(i)){
+                para.textContent += i + " " ; 
+                listNumber.appendChild(para) ; 
+            }
+            i-- ; 
+        }
+    </script>
+</body>
+</html>

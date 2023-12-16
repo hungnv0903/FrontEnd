@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="form.js" defer></script>
+    <title>Document</title>
+    <style>
+        div {
+            margin-bottom: 10px;
+        }
+        div#main-video {
+            position: absolute;
+            top: 50%;
+            transform: translate(-50% , -50%);
+            width: 480px;
+            height: 380px;
+            border-radius: 10px;
+            border-color: #eee;
+            background-image: linear-gradient(to bottom, rgba(0,0,0) , rgba(0,0,0,0.1));
+        }
+
+        .hidden {
+            left: -50%;
+        }
+        .showing {
+            left: 50%;
+        }
+
+        div#main-video video {
+            display: block;
+            width: 400px;
+            margin: 40px auto;
+        }
+        
+    </style>
+</head>
+<body>
+    <button id="display-video">Display video</button>
+    <div id="main-video" class="hidden">
+        <video>
+            <source src="media/video.mp4">
+            <source src="media/video.webm">
+            <p>Your browser does not support HTML5 video tags</p>
+        </video>
+    </div>
+    <hr>
+    <form action="">
+        <div>
+            <label for="fname">First name</label>
+            <input type="text" id="fname">
+        </div>
+        <div>
+            <label for="lname">Last name</label>
+            <input type="text" id="lname">
+        </div>
+        <div>
+            <input type="submit">
+        </div>
+    </form>
+    <p id="warning"></p>
+    <hr>
+</body>
+</html>

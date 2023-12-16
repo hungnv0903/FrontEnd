@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function mul(a, b) {   
+            var arr_a  =a.split("").reverse() ; 
+            // console.log(arr_a);
+            if(b==0) return 0 ; 
+            if(b==1) return a ; 
+
+            var carry = 0 ; 
+            var result = [] ; 
+
+            for(let i = 0 ; i<arr_a.length ; i++){
+                 const product = Number(arr_a[i])*b + carry ; 
+                //  console.log(product);
+                 result.push(product%10) ;
+                 carry = Math.floor(product/10) ;  
+            }
+
+            while(carry > 0){
+                result.push(carry%10) ; 
+                carry = Math.floor(carry/10) ; 
+            }
+
+            return result.reverse().join("") ; 
+        }
+
+        const product = mul("12345678910111213", 89);
+        console.log(product); 
+    </script>
+</body>
+
+</html>

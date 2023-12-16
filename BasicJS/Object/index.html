@@ -7,6 +7,36 @@
 </head>
 <body>
     <script>
+
+        var obj_1  = {
+            name : "Hung",
+            age : 24
+        }
+        var obj_2 = {
+            a : "name",
+            b : "age"
+        }
+
+        console.log(`Name : ${obj_1[obj_2["a"]]} `);
+        console.log(`Age : ${obj_1[obj_2["b"]]}`);
+        console.log(`Age : ${obj_1[obj_2.b]}`);
+
+        var new_obj = {
+            a : "n" , 
+            b : 'V' , 
+            c : 'h',
+            d : {
+                d1:'d1' , 
+                d2 :'d2'
+            }
+        }
+
+        for(var key in new_obj){
+            console.log(`Key : ${key} Value : ${new_obj[key]}`);
+        }
+
+
+
         var obj_1 = {} ;
         var obj_2 = new Object() ; 
 

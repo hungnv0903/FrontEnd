@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        var arr = [] ; 
+        var b = arr ; 
+        b = undefined ; 
+        console.log(b);
+        function clear(x){
+            x = undefined ; 
+        }
+        clear(arr) ; 
+        console.log(arr);
+
+        console.log("");
+        function checkNumber(a){
+            if(!isNaN(a)){
+                if(typeof(a)==="number"){
+                    return typeof(a) ; 
+                }
+                return false
+                
+                // return typeof a ==="number" ; 
+            }   
+        }
+        var a = 123 ; 
+        console.log(checkNumber(a));
+
+        console.log("");
+        let result = isNaN(123) ; 
+        let result_1 = isNaN(-123) ; 
+        let result_2 = isNaN("123") ; //fale : vi 123 co the ep kieu thanh number 
+        let result_3 = isNaN("28/10/2023") ; //true : khong the ep ve kieu number
+
+        console.log(result);
+        console.log(result_1);
+        console.log(result_2 , typeof("123"));
+        console.log(result_3 , typeof("28/10/2023"));
+    </script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+.img-container img {
+    height: 400px;
+    width: 400px;
+    border: 5px solid blue;
+}
+
+.btn-group {
+    margin-top: 10px;
+}

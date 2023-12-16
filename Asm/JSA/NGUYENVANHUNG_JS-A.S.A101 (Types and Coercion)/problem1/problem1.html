@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function empty(o){
+            o = null ;  
+        }
+        var x = [1,2] ; 
+        empty(x) ; 
+        console.log(x); //[1,2]
+        //console.log(x) = [1,2] (Giá trị của x không thay đổi) .
+        //Vì mặc dù cả x và o đêu tham chiếu đến một vùng nhớ
+        // nhưng khi gán o = null thì nó sẽ sinh ra một vùng nhớ để lưu giá trị là null
+        // và gán o cho giá trị null đó. Nó se không làm ảnh hưởng đến biến x ;  
+    </script>
+</body>
+</html>

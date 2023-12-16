@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        (function () {
+            console.log(1);
+            setTimeout(function () { console.log(2) }, 1000);
+            setTimeout(function () { console.log(3) }, 0);
+            console.log(4);
+        })();
+
+        //Output: 1,4,3,2 
+        // Trước tiên console.log(1) sẽ được đẩy  vào callStack thực hiện in ra 1 ; 
+
+        // Đẩy setTimeout 1s vào callStack nhưng do setTimeout là một phương thức bất đồng bộ 
+        // nên nó sẽ bị đẩy sang WebAPI (web API là nới thực hiện các phương thức bất đồng bộ)
+        // Tương tự với thằng setTimeout 0s nó cũng sẽ bị đẩy sang WebAPI nhưng do nó có thời gian chờ
+        // là 0s nên nó se thực hiện trước thằng setTimeout 1s. Cả hai thằng đều trả về 1
+        // function callback và đẩy vào Callback queue.
+
+        // Trong thời gian sử lý với 2 thằng setTimeout thì chương trình vẫn chạy và đẩy thằng 
+        // console.log(4) vào callStack và in ra 4 
+
+        // Sau khi in ra thăng 4 thì EventLoop sẽ kiểm tra CallStack có trống hay không.
+        //Lúc này nó trống nên nó sẽ đẩy thằng setTimeout 0s sang callStack thực hiện console.log(3)
+        //và in ra 3. Sau khi xong thì callStack trống.
+
+        // Event Loop lại tiếp tục kiểm tra callStack thấy nó trống,tiếp tục thực hiện tương tự và
+        // in ra thằng console.log(2)
+
+        // Output 1 , 4 , 3 , 2 ; 
+    </script>
+</body>
+
+</html>

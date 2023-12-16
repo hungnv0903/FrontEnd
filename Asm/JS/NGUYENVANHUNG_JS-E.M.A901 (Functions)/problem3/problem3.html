@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section {
+            width: 100%;
+            border: 1px solid black;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <section></section>
+    <script>
+        const section = document.querySelector('section') ; 
+        let names = [
+        'Chris',
+        'Li Kang',
+        'Anne',
+        'Francesca',
+        'Mustafa',
+        'Tina',
+        'Bert',
+        'Jada',
+        ];
+        function random(min , max){
+            return Math.floor(Math.random()*(max-min+1))+min ; 
+        }
+
+        function chooseName(arr , min , max){
+            // Truong hop min max qua nho hoac qua lon ; 
+            if(min < 0) min = 0 ; 
+            if(max > arr.length) max = arr.length ; 
+            console.log("min : " , min);
+            console.log("max : " , max);
+
+            var index = random(min,max) ; 
+
+            console.log("index : " , index);
+
+            var para = document.createElement('p') ; 
+            para.textContent = arr[index] ; 
+            section.appendChild(para) ; 
+        }
+
+        chooseName(names,-100,100) ; 
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var string  = "nguyen van hung , nguyen hung , HUNG nguyen  " ;
+        // lấy từ trái qua phải   
+        var stringSlice = string.slice(0,7);
+        var stringSlice_1 = string.slice(7 , -1); 
+        var stringSlice_2 = string.slice(-4 , 7) ; //khong duoc gi
+        var stringSlice_3 = string.slice(-15 , -1) ; 
+        var stringSlice_4 = string.slice(-15 , 40) ; 
+        console.log(stringSlice_1);
+        console.log(stringSlice); 
+        console.log(stringSlice_2);
+        console.log(stringSlice_3);
+        console.log(stringSlice_4);
+
+        console.log("------------");
+        var stringSubstring = string.substring(2 , 7) ; 
+        var stringSubstring_1 = string.substring(-2 , 7) ;  //khong the truyen gt am,neu bat dau bang 1 gt am se cho =0
+        var stringSubstring_2 = string.substring(7 , 0) ; //end < start thi se dao lai gt
+
+        var stringSubstr   = string.substr(3,8) ; // cap gia tri start-length,length se lay tu trai qua phai
+        var stringSubstr_1 = string.substr(-1,5) ; //tra ve gi tri cuoi cung
+        var stringSubstr_2 = string.substr(5,1) ; //tra ve gia tri thu 5 la n ; 
+        var stringSubstr_3 = string.substr(5,-1) ; // gt length khong duoc am   
+
+        var stringReplace = string.replace("nguy" , "NGUY") //thay the chuoi
+        var stringReplace_1 = string.replace(" ",  "-") ;  //thay the chuoi con xuat hien dau tien
+        var stringReplace_2 = string.replace(/hung/g,"Abc") ;//g:global : phan biet chu hoa-thuong 
+        var stringReplace_3 = string.replace(/hung/gi , "OOP") ; //gi: khong phan biet hoa -thuong
+        var stringReplace_4 = string.replaceAll(/hung/gi , "SSS") ; //gi: khong phan biet hoa -thuong
+        
+        //Trim
+        var originStr = "   FPT SOFTWARE    "
+
+        strStrim = originStr.trim() ; //loai bo khoang trang  2 dau 
+        strStrim_1 = originStr.trimStart() ;//loai bo khoang trang o dau  
+        strStrim_2 = originStr.trimEnd() ;  // loai bo khoang tran o cuoi
+        
+        // pad : them vao truoc hoac sau n chuoi (n , chuoi) ; 
+        var strPad = '1' ; 
+        var padStart = strPad.padStart(10 , "h") ; 
+        var padEnd = strPad.padEnd(10 , "h") ;
+        
+        console.log(padStart);
+        console.log(padEnd);
+
+        console.log(strStrim_2);
+        console.log(strStrim_1);
+        console.log(strStrim);
+        console.log(stringReplace_4);
+        console.log(stringReplace_3);
+        console.log(stringReplace_2);
+        console.log(stringReplace_1);
+        console.log(stringReplace);
+        
+        console.log(stringSubstr_3);
+        console.log(stringSubstr_2);
+        console.log(stringSubstr_1);
+        console.log(stringSubstr);
+        
+        console.log(stringSubstring_2);
+        console.log(stringSubstring_1);
+        console.log(stringSubstring); 
+
+        
+
+
+    </script>
+</body>
+</html>

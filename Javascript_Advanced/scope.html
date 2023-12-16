@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //ex5 
+        // closure
+        function outerClosure(outerVar){
+            return function innerClosure(innerVar) {
+                return function innerChildClosure(innerChildVar) {
+                    console.log("outerVar : " , outerVar);
+                    console.log("innerVar : " , innerVar);
+                    console.log("innerChildVar : " , innerChildVar);
+                }
+            } 
+        }
+
+        const newFunction = outerClosure("outside") ; 
+        const childFunction =  newFunction("inside") ;
+        childFunction("insideChild") ; 
+
+
+        // ex4
+        // hoisting: dua cac khai bao va fc len dau truoc khi bien dich
+        //chi hoisting phan khai khao khong hoisting phan gia tri
+        //let va const trong es6 deu duoc hoisting nhung khong uoc khai bao
+        console.log(hoistedVar); //error
+        var hoistedVar = "Hello FA" ; 
+        console.log(hoistedVar); //helloo FA
+
+        //ex3
+        // var neu khai bao trong fc thi la fc scope ben ngoai la global scope co the khai bao va gan lai
+        // let duoc gan lai nhung khong the khai bao lai (block scope)
+        //const khong the khoi tao va khai bao lai (block scope)
+        //block scope bat dau tu es6 va cac phien ban sau
+        function scope(){
+            var d = 30 ; 
+            let e = 40 ; 
+            const f = 50 ; 
+            if(true){
+                var a = 5 ; 
+                let b = 10 ; 
+                const c = 20 ; 
+
+            }
+
+            console.log(a);
+            // console.log(b);
+            // console.log(c);
+        }
+        scope() ; 
+        // console.log(d);
+        //ex2
+        var globalVar  = "Hello , I'm from global!"
+        function outerFunction(){
+            let outerVar  = "hello , i'm from outside!"
+
+            function innerFunction(){
+                let innerVar = "hello , i'm from inside!"
+                
+                console.log(globalVar);
+                console.log(outerVar);
+                console.log(innerVar);
+            }
+
+            return innerFunction() ; 
+        }
+        outerFunction() ; 
+        //ex1
+        if(true){
+            const message  =  "Hello world !"
+            console.log(message);
+        }
+        //console.log(message); //error ; 
+    </script>
+</body>
+</html>

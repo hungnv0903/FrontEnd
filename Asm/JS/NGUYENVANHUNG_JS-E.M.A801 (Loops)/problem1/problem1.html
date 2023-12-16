@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <ul></ul>
+    </section>
+
+    <script>
+        const list = document.querySelector('section ul') ; 
+        var myArray = ['tomatoes', 'chick peas', 'onions', 'rice', 'black beans'] ; 
+        for(var i = 0 ; i<myArray.length ; i++){
+            const para = document.createElement('li') ; 
+            para.textContent = myArray[i] ; 
+            list.appendChild(para) ; 
+        }
+
+    </script>
+</body>
+</html>

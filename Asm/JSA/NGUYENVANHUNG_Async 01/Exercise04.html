@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Case1 
+        console.log("A");
+        setTimeout(function () { console.log("B"); }, 0);
+        setTimeout(function () { console.log("C"); }, 0)
+        console.log("D");
+
+        //Output: A,D,B,C ; 
+        //A được đưa vào callStack trước nên in ra 'A' ; Tiếp đến thằng B đưa vào callStack nhưng 
+        // do là phương thức bất đồng bộ nê bị đẩy sang WebAPI thực hiện và trả về một function callback
+        // sau đó bị đẩy sang Callback queue
+        //Thằng C thực hiện tương tự như thăng B nhưng nó xếp sau
+        //Thăng D đẩy vào CallStack chạy in ra 'D'
+        //Eventloop thấy CallStack trông nên đẩy thằng B vào và in ra 'B' tiếp theo sẽ là thằng D.
+
+        //Case2 
+        setTimeout(function () { 
+            setTimeout(function () { 
+                console.log('A'); 
+            }, 0); 
+        }, 0);
+        setTimeout(function () { 
+            console.log('B'); 
+        }, 0);
+
+        setTimeout(function () {
+            setTimeout(function () {
+                console.log('C');
+            }, 0);
+        }, 10);
+        setTimeout(function () {
+            console.log('D');
+        }, 0);
+
+        //Ouput : B,D,A,C : 
+        // Cả 4 thằng đều bị đẩy sang WebApi để thực hiện vì bọn này là các phương thức bất đồng bộ
+        // Tất cả đều trả về một function CallBack
+        // Thức tự trong CallBack queue sẽ là A,B,D,C : thằng C xếp cuối vị nó phải chờ 10ms.
+        // CallStack trống nên EventLoop se thực đẩy lần lượt các thằng này sang CallStack 
+        //Thăng A sang như nó lại trả về một phương thức setTimeout nên nó lại bị đẩy sang WEbAPI
+        //Thăng B thực hiện và in ra B
+        //Thằng D tương thự thằng B và in ra D
+        //Thằng C thì giống thằng A lại bị đẩy sang WebAPI 
+        // Thằng A,C thực hiện thêm một bược và cuối cùng in ra A và C 
+
+        //Case3 : 
+        var x = 'A';
+        setTimeout(function () { 
+            console.log(x); 
+            x = 'B'; 
+        }, 3);
+        setTimeout(function () {
+            console.log(x);
+            x = 'C';
+        }, 2);
+        setTimeout(function () {
+            console.log(x);
+            x = 'D';
+        }, 1);
+        setTimeout(function () {
+            console.log(x);
+        }, 4);
+
+        //Output : A,D,C,B;
+        // Thằng settimeout 1s sẽ thực hiện trước và in ra x = 'A' sau đó gán x = 'D'
+        // Thằng settimeout 2s sẽ tiếp tục thực hiện in ra x = 'D' sau đó gán x = 'C'
+        // Thằng settimeout 3s sẽ tiếp tục thực hiện in ra x = 'C' sau đó gán x = 'B'
+        //Cuối cùng là thằng settimeout 4s thực hiện in ra x='B';
+
+        //Case4
+        var t1 = setTimeout(function () {
+            console.log('A');
+            setTimeout(function () {
+                console.log('B');
+            }, 0);
+        }, 100);
+
+        var t2 = setTimeout(function () {
+            console.log('C');
+            setTimeout(function () {
+                console.log('D');
+            }, 0);
+        }, 200);
+
+        clearTimeout(t1);
+        setTimeout(function () {
+            clearTimeout(t2);
+        }, 250);
+ 
+        //Output : C,D
+        // Thằng t1 sẽ thực hiện trước tuy nhiên bên dưới lại gọi đến phương thức clearTimeout() với
+        // thằng t1 nên nó sẽ sẽ ngăn chặn t1 thực hiện
+        // t2 chờ 200ms sẽ thực hiện in ra C sau đó in ra D
+        // bên dưới thằng clearTime(t2) phải mất 250ms thì mới được gọi tức là thằng t2 đã thực hiện 
+        // song rồi.
+    </script>
+</body>
+
+</html>
